@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4a199"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/rollButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:backgroundTint="#ffd1d1"
+        android:fontFamily="@font/roboto"
+        android:onClick="rollDice"
+        android:text="@string/roll_button"
+        android:textAlignment="center"
+        android:textColor="#2e1e1a"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="24sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/holdButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondDice" />
+
+    <Button
+        android:id="@+id/holdButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="33dp"
+        android:background="#FFD1D1"
+        android:backgroundTint="@color/pink"
+        android:fontFamily="@font/roboto"
+        android:onClick="holdTurn"
+        android:text="@string/hold_button"
+        android:textAlignment="center"
+        android:textColor="#2e1e1a"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/turnTotal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rollButton" />
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="464dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="49dp"
+        android:fontFamily="@font/space_mono_bold"
+        android:text="@string/app_title"
+        android:textAlignment="center"
+        android:textColor="#2E1E1A"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/player1TotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="34dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/player1_total_label"
+        android:textColor="#2E1E1A"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/player2TotalLabel"
+        app:layout_constraintEnd_toStartOf="@+id/player1Total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle" />
+
+    <TextView
+        android:id="@+id/player1Total"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="152dp"
+        android:fontFamily="@font/roboto"
+        android:textAlignment="textStart"
+        android:textColor="#2E1E1A"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/player1TotalLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/player1TotalLabel" />
+
+    <TextView
+        android:id="@+id/player2TotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="31dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/player2_total_label"
+        android:textColor="#2E1E1A"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/playerTurnLabel"
+        app:layout_constraintEnd_toStartOf="@+id/player2Total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player1TotalLabel" />
+
+    <TextView
+        android:id="@+id/player2Total"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="152dp"
+        android:fontFamily="@font/roboto"
+        android:textAlignment="viewStart"
+        android:textColor="#2E1E1A"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/player2TotalLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/player2TotalLabel" />
+
+    <TextView
+        android:id="@+id/turnTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/space_mono_bold"
+        android:text="@string/turn_total_label"
+        android:textColor="#2E1E1A"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/turnTotal"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/turnTotal"
+        android:layout_width="61dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/space_mono_bold"
+        android:textAlignment="viewStart"
+        android:textColor="#2E1E1A"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/turnTotalLabel" />
+
+    <TextView
+        android:id="@+id/playerTurnLabel"
+        android:layout_width="464dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:fontFamily="@font/space_mono_bold"
+        android:text="@string/player1_turn"
+        android:textAlignment="center"
+        android:textColor="#2e1e1a"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/secondDice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player2TotalLabel" />
+
+    <ImageView
+        android:id="@+id/firstDice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="33dp"
+        android:contentDescription="@string/dice1_contentdescription"
+        app:layout_constraintBottom_toTopOf="@+id/rollButton"
+        app:layout_constraintEnd_toStartOf="@+id/secondDice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/dice1" />
+
+    <ImageView
+        android:id="@+id/secondDice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="33dp"
+        android:contentDescription="@string/dice6_contentdescription"
+        app:layout_constraintBottom_toTopOf="@+id/rollButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/firstDice"
+        app:layout_constraintTop_toBottomOf="@+id/playerTurnLabel"
+        app:srcCompat="@drawable/dice6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

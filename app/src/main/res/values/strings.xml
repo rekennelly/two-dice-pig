@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TwoDicePig</string>
+    <string name="roll_button">Roll Dice</string>
+    <string name="hold_button">Hold</string>
+    <string name="app_title">Two Dice Pig</string>
+    <string name="player1_total_label">Player 1 Total:</string>
+    <string name="player2_total_label">Player 2 Total:</string>
+    <string name="turn_total_label">Turn total: </string>
+    <string name="player1_turn">Current player: Player 1</string>
+    <string name="player2_turn">Current player: Player 2</string>
+    <string name="dice1_contentdescription">A light green dice with dark green dots rolled to a one</string>
+    <string name="dice2_contentdescription">A light green dice with dark green dots rolled to a two</string>
+    <string name="dice3_contentdescription">A light green dice with dark green dots rolled to a three</string>
+    <string name="dice4_contentdescription">A light green dice with dark green dots rolled to a four</string>
+    <string name="dice5_contentdescription">A light green dice with dark green dots rolled to a five</string>
+    <string name="dice6_contentdescription">A light green dice with dark green dots rolled to a six</string>
+    <string name="player1_victory">Player 1 wins!</string>
+    <string name="player2_victory">Player 2 wins!</string>
+</resources>
